@@ -1,0 +1,7 @@
+TenCoSo: Phản ánh tên của cơ sở khám chữa bệnh trên địa bàn thành phố Hồ Chí Minh.
+SoGiayPhep: Số giấy phép hoạt động của cơ sở khám.
+DiaChi: Địa chỉ cụ thể của cơ sở khám.
+NgayCap: Ngày cấp giấy phép hoạt động của cơ sở khám.
+TinhTrang: Tình trạng hoạt động của phòng khám.
+TenHinhThuc: loại hình và chuyên khoa của cơ sở khám.
+SoCCHN_NDD: Số chứng chỉ hành nghề của người chịu trách nhiệm chuyên môn kĩ thuật của cơ sở khám.
