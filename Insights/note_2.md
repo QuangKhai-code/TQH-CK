@@ -1,0 +1,63 @@
+# Phân Tích Dashboard Y Tế TP. Hồ Chí Minh
+
+## **1. Biểu đồ: Số lượng nhà thuốc ở các quận**
+### Nhận xét
+- Quận Bình Tân, Quận Bình Chánh và Thành phố Thủ Đức có số lượng nhà thuốc cao nhất, vượt trội so với các quận khác.
+- Những khu vực này có dân cư đông đúc và tập trung nhiều khu dân cư mới phát triển. Thành phố Thủ Đức (sáp nhập từ 3 quận trước đây) là khu vực đông dân, với nhiều khu công nghiệp và trường đại học, dẫn đến nhu cầu sử dụng dịch vụ y tế và mua thuốc cao.
+- Các quận ngoại thành như Huyện Cần Giờ và Quận 2 (cũ) có số lượng nhà thuốc ít hơn, phản ánh quy mô dân số và mức độ phát triển kinh tế tại các khu vực này.
+
+### Liên hệ thực tế
+- Khu vực đông dân cư thường có mức sống tăng dần, dẫn đến nhu cầu tiếp cận thuốc và các dịch vụ y tế tiện lợi hơn. 
+- Các quận như Bình Chánh, Bình Tân có nhiều công nhân lao động, điều này cũng lý giải sự gia tăng số lượng nhà thuốc để phục vụ tầng lớp này.
+
+---
+
+## **2. Biểu đồ: Số lượng cơ sở khám bệnh qua các năm**
+### Nhận xét
+- Số lượng cơ sở khám bệnh gia tăng đáng kể từ năm 2000 đến 2018, đặc biệt tăng mạnh trong giai đoạn 2013–2018.
+- Sau năm 2018, số lượng cơ sở giảm sút đáng kể.
+
+### Liên hệ thực tế
+- Giai đoạn 2013–2018 là thời kỳ phát triển vượt bậc của dịch vụ y tế tư nhân, do các chính sách mở rộng đầu tư vào y tế và nhu cầu khám chữa bệnh tăng cao ở TP.HCM.
+- Sự suy giảm sau năm 2018 có thể liên quan đến:
+  - Thay đổi quy định quản lý cơ sở y tế.
+  - Cạnh tranh gay gắt giữa các đơn vị.
+  - Ảnh hưởng từ đại dịch COVID-19 (2020–2021) khiến một số cơ sở không thể duy trì hoạt động.
+
+---
+
+## **3. Biểu đồ: Số lượng cơ sở khám bệnh các loại hình**
+### Nhận xét
+- Phòng khám chuyên khoa Răng Hàm Mặt và Nội tổng hợp chiếm tỷ trọng lớn nhất, vượt xa các loại hình khác.
+- Các phòng khám chuyên biệt (như phòng khám Nhi, Sản phụ khoa) cũng chiếm tỷ lệ đáng kể.
+- Một số loại hình chuyên biệt (ví dụ: Phòng khám Lao và bệnh phổi, dịch vụ tiêm chủng, Tâm thần) chiếm tỷ lệ rất nhỏ.
+
+### Liên hệ thực tế
+- TP.HCM có dân số trẻ và nhu cầu cao về dịch vụ nha khoa, đây là lý do các phòng khám Răng Hàm Mặt chiếm ưu thế.
+- Các bệnh lý phổ biến như cảm cúm, bệnh nhi và sản phụ khoa được đáp ứng thông qua hệ thống phòng khám tư nhân và công lập, phản ánh sự ưu tiên của cư dân trong việc tiếp cận các dịch vụ gần gũi và tiện lợi hơn bệnh viện lớn.
+
+---
+
+## **4. Biểu đồ: Số lượng các loại hình buôn bán thuốc qua các năm**
+### Nhận xét
+- Số lượng nhà thuốc tăng mạnh qua các năm, đặc biệt giai đoạn 2020–2023, trong khi các cơ sở buôn bán dược liệu và doanh nghiệp duy trì ở mức thấp.
+- Giai đoạn 2024 có xu hướng giảm nhẹ, nhưng số lượng nhà thuốc vẫn chiếm ưu thế lớn.
+
+### Liên hệ thực tế
+- Từ năm 2020, đại dịch COVID-19 thúc đẩy sự gia tăng số lượng nhà thuốc, do nhu cầu mua thuốc và dụng cụ y tế (như khẩu trang, thuốc hạ sốt, kháng sinh) tăng đột biến.
+- Việc người dân ngày càng tin tưởng và sử dụng các sản phẩm thuốc qua các kênh chính thống cũng góp phần thúc đẩy sự phát triển của hệ thống nhà thuốc.
+
+---
+
+## **Tóm tắt các yếu tố ảnh hưởng chung**
+1. **Dân cư và quy mô dân số**:
+   - Những khu vực như Bình Tân, Thủ Đức có dân cư đông, kéo theo sự phát triển của hệ thống nhà thuốc và các cơ sở y tế.
+   
+2. **Mức sống và nhu cầu y tế**:
+   - Với mức sống ngày càng tăng, người dân ưu tiên sử dụng dịch vụ y tế chất lượng, đặc biệt trong các lĩnh vực như nha khoa, nội tổng hợp, và sản phụ khoa.
+   
+3. **Dịch bệnh**:
+   - Đại dịch COVID-19 là sự kiện lớn ảnh hưởng trực tiếp đến sự gia tăng và thay đổi cơ cấu của các nhà thuốc và cơ sở khám chữa bệnh.
+
+4. **Chính sách và quy định**:
+   - Chính sách phát triển y tế tư nhân và quản lý cơ sở y tế đã tạo ra bước phát triển mạnh mẽ, nhưng cũng làm giảm số lượng ở một số giai đoạn do cạnh tranh và thay đổi quy định.
