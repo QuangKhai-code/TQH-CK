@@ -1,36 +1,69 @@
 NHÀ THUỐC
-Nhận xét:
-1.Khu vực có số lượng nhà thuốc cao nhất:
-oTP. Thủ Đức dẫn đầu với 1.408 cơ sở nhà thuốc, vượt xa các quận khác. Điều này có thể do khu vực này có diện tích lớn, dân cư đông đúc và sự phát triển mạnh về kinh tế, giáo dục, y tế.
-2.Khu vực có số lượng nhà thuốc thấp nhất:
-oCần Giờ có số lượng thấp nhất (52 cơ sở), có thể do đặc thù là khu vực ven biển, mật độ dân cư thấp, và ít tập trung các cơ sở y tế lớn.
-3.Quận ngoại thành và vùng ven:
-oCác quận/huyện vùng ven như Bình Chánh (939 cơ sở), Bình Tân (1.035 cơ sở), và Hóc Môn (672 cơ sở) có số lượng nhà thuốc tương đối cao. Điều này phản ánh sự phát triển đô thị hóa và nhu cầu chăm sóc sức khỏe tăng lên tại các khu vực này.
-4.Quận nội thành:
-oCác quận trung tâm như Quận 1 (232 cơ sở), Quận 3 (223 cơ sở), và Quận 4 (149 cơ sở) lại có số lượng nhà thuốc thấp hơn. Lý do có thể là mật độ cơ sở nhà thuốc đã ổn định trong khu vực này, trong khi quy mô diện tích nhỏ hơn và mật độ dân cư cũng giảm so với các vùng ngoại thành đang phát triển.
-5.Quận có số lượng nhà thuốc trung bình:
-oCác quận như Quận 12 (751 cơ sở), Gò Vấp (680 cơ sở), và Tân Phú (691 cơ sở) có số lượng ở mức trung bình cao, phản ánh mức độ phát triển cân đối giữa quy mô dân số và dịch vụ y tế.
+Khu vực có số lượng nhà thuốc cao nhất:
+TP. Thủ Đức dẫn đầu với 1.926 cơ sở nhà thuốc, vượt xa các quận khác.
+Lý do: khu vực này có diện tích lớn, dân cư đông đúc, và sự phát triển mạnh về kinh tế, giáo dục, y tế.
+Khu vực có số lượng nhà thuốc thấp nhất:
+Cần Giờ có số lượng thấp nhất (100 cơ sở).
+Lý do: khu vực ven biển, mật độ dân cư thấp, và ít tập trung các cơ sở y tế lớn.
+Quận ngoại thành và vùng ven:
+Các quận/huyện vùng ven như:
+Bình Chánh: 1.339 cơ sở.
+Bình Tân: 1.390 cơ sở.
+Hóc Môn: 941 cơ sở.
+Phản ánh: Sự phát triển đô thị hóa và nhu cầu chăm sóc sức khỏe tăng lên tại các khu vực này.
+Quận nội thành:
+Các quận trung tâm như:
+Quận 1: 316 cơ sở.
+Quận 3: 324 cơ sở.
+Quận 4: 204 cơ sở.
+Lý do: Mật độ cơ sở nhà thuốc đã ổn định, quy mô diện tích nhỏ hơn, và mật độ dân cư giảm so với các vùng ngoại thành.
+Quận có số lượng nhà thuốc trung bình:
+Các quận như:
+Quận 12: 1.042 cơ sở.
+Gò Vấp: 926 cơ sở.
+Tân Phú: 928 cơ sở.
+Phản ánh: Mức độ phát triển cân đối giữa quy mô dân số và dịch vụ y tế.
 Tổng quan:
-TP. Hồ Chí Minh có sự phân bổ số lượng nhà thuốc không đồng đều, tập trung nhiều tại các khu vực đông dân cư, đang đô thị hóa như TP. Thủ Đức, Bình Tân, Bình Chánh, và thấp ở các vùng ven như Cần Giờ.
-Số lượng cơ sở nhà thuốc phụ thuộc vào mật độ dân cư, mức độ phát triển kinh tế, và nhu cầu chăm sóc sức khỏe ở từng khu vực.
+TP. Hồ Chí Minh có sự phân bổ số lượng nhà thuốc không đồng đều.
+Tập trung nhiều tại các khu vực đông dân cư và đang đô thị hóa như TP. Thủ Đức, Bình Tân, Bình Chánh.
+Thấp ở các vùng ven như Cần Giờ.
+Tổng kết: Số lượng cơ sở nhà thuốc phụ thuộc vào mật độ dân cư, mức độ phát triển kinh tế, và nhu cầu chăm sóc sức khỏe ở từng khu vực.
 CƠ SỞ KHÁM
-Nhận xét:
-1.Khu vực có số lượng cơ sở khám cao nhất:
-oQuận 10 dẫn đầu với 670 cơ sở khám, vượt trội hơn hẳn so với các quận khác. Điều này cho thấy quận 10 có hệ thống y tế phát triển, tập trung nhiều cơ sở dịch vụ y tế tư nhân và công lập.
-2.Khu vực có số lượng cơ sở khám thấp nhất:
-oCần Giờ chỉ có 31 cơ sở khám, phản ánh thực tế là khu vực này có mật độ dân số thấp và nhu cầu dịch vụ y tế không cao như các quận khác.
-3.Quận nội thành:
-oCác quận trung tâm như Quận 1 (396 cơ sở), Quận 3 (441 cơ sở), và Quận 5 (476 cơ sở) có số lượng cơ sở khám tương đối cao, nhờ vào vị trí trung tâm và sự phát triển lâu đời của các dịch vụ y tế.
-4.Quận ngoại thành và vùng ven:
-oCác quận/huyện ngoại thành như Bình Chánh (201 cơ sở), Củ Chi (188 cơ sở), và Nhà Bè (95 cơ sở) có số lượng cơ sở khám thấp hơn, điều này phù hợp với đặc điểm phát triển và mật độ dân cư ở các khu vực này.
-5.TP. Thủ Đức:
-oTP. Thủ Đức có 516 cơ sở khám, nằm trong nhóm cao, cho thấy sự phát triển nhanh chóng và nhu cầu chăm sóc sức khỏe ngày càng tăng tại khu vực này.
+Khu vực có số lượng cơ sở khám cao nhất:
+Quận 10 dẫn đầu với 670 cơ sở khám.
+Lý do: Hệ thống y tế phát triển, tập trung nhiều cơ sở dịch vụ y tế tư nhân và công lập.
+Khu vực có số lượng cơ sở khám thấp nhất:
+Cần Giờ chỉ có 31 cơ sở khám.
+Lý do: Mật độ dân số thấp và nhu cầu dịch vụ y tế không cao.
+Quận nội thành:
+Các quận trung tâm như:
+Quận 1: 396 cơ sở.
+Quận 3: 441 cơ sở.
+Quận 5: 476 cơ sở.
+Lý do: Vị trí trung tâm và sự phát triển lâu đời của các dịch vụ y tế.
+Quận ngoại thành và vùng ven:
+Các quận/huyện ngoại thành như:
+Bình Chánh: 201 cơ sở.
+Củ Chi: 188 cơ sở.
+Nhà Bè: 95 cơ sở.
+Phản ánh: Phù hợp với đặc điểm phát triển và mật độ dân cư thấp.
+TP. Thủ Đức:
+Có 516 cơ sở khám.
+Nằm trong nhóm cao, phản ánh sự phát triển nhanh chóng và nhu cầu chăm sóc sức khỏe tăng cao.
 So sánh giữa số lượng nhà thuốc và cơ sở khám:
-     1. Tương quan giữa hai loại cơ sở:
-oKhu vực có số lượng cao cho cả hai loại cơ sở:
-TP. Thủ Đức, Bình Tân, Quận 10, Quận 5, và Gò Vấp đều có số lượng nhà thuốc và cơ sở khám cao. Điều này cho thấy những khu vực này có dân cư đông đúc và nhu cầu chăm sóc sức khỏe lớn.
-oKhu vực có số lượng thấp cho cả hai loại cơ sở:
-Cần Giờ có số lượng thấp cả về nhà thuốc (52 cơ sở) và cơ sở khám (31 cơ sở), điều này phản ánh mật độ dân cư thấp và nhu cầu y tế không cao
+1. Tương quan giữa hai loại cơ sở:
+Khu vực có số lượng cao cho cả hai loại cơ sở:
+TP. Thủ Đức, Bình Tân, Quận 10, Quận 5, và Gò Vấp.
+Phản ánh: Dân cư đông đúc và nhu cầu chăm sóc sức khỏe lớn.
+Khu vực có số lượng thấp cho cả hai loại cơ sở:
+Cần Giờ:
+Nhà thuốc: 52 cơ sở.
+Cơ sở khám: 31 cơ sở.
+Phản ánh: Mật độ dân cư thấp và nhu cầu y tế không cao.
 2. Phân bố dịch vụ y tế:
-oCác khu vực nội thành và đang phát triển mạnh như TP. Thủ Đức, Quận 10, và Bình Tân có cả hai loại cơ sở (nhà thuốc và cơ sở khám) phát triển mạnh, đáp ứng tốt nhu cầu y tế.
-oCác khu vực ngoại thành và vùng ven như Cần Giờ, Nhà Bè có số lượng thấp, cần được đầu tư thêm để cải thiện khả năng tiếp cận dịch vụ y tế.
+Khu vực nội thành và đang phát triển mạnh như:
+TP. Thủ Đức, Quận 10, Bình Tân:
+Có cả hai loại cơ sở phát triển mạnh, đáp ứng tốt nhu cầu y tế.
+Khu vực ngoại thành và vùng ven như:
+Cần Giờ, Nhà Bè:
+Có số lượng thấp, cần đầu tư thêm để cải thiện khả năng tiếp cận dịch vụ y tế.
