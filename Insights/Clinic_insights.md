@@ -3,8 +3,8 @@
 ## **1. Biểu đồ: Số lượng nhà thuốc ở các quận**
 ### Nhận xét
 - Quận Bình Tân, Quận Bình Chánh và Thành phố Thủ Đức có số lượng nhà thuốc cao nhất, vượt trội so với các quận khác.
-- Những khu vực này có dân cư đông đúc và tập trung nhiều khu dân cư mới phát triển. Thành phố Thủ Đức (sáp nhập từ 3 quận trước đây) là khu vực đông dân, với nhiều khu công nghiệp và trường đại học, dẫn đến nhu cầu sử dụng dịch vụ y tế và mua thuốc cao.
-- Các quận ngoại thành như Huyện Cần Giờ và Quận 2 (cũ) có số lượng nhà thuốc ít hơn, phản ánh quy mô dân số và mức độ phát triển kinh tế tại các khu vực này.
+- Những khu vực này có dân cư đông đúc và tập trung nhiều khu dân cư mới phát triển. Thành phố Thủ Đức (sáp nhập từ 3 quận trước đây, quận 2, quận 9, quận Thủ Đức) là khu vực đông dân, với nhiều khu công nghiệp và trường đại học, dẫn đến nhu cầu sử dụng dịch vụ y tế và mua thuốc cao.
+- Huyện ngoại thành như Huyện Cần Giờ có số lượng nhà thuốc ít hơn, phản ánh quy mô dân số và mức độ phát triển kinh tế tại các khu vực này.
 
 ### Liên hệ thực tế
 - Khu vực đông dân cư thường có mức sống tăng dần, dẫn đến nhu cầu tiếp cận thuốc và các dịch vụ y tế tiện lợi hơn. 
