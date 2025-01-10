@@ -85,40 +85,6 @@ def process_user_query(query):
     )
     return generate_openai_response(system_prompt)
 
-# HTML for toggle button and chat container
-st.markdown(
-    """
-    <div class="chat-container">
-        <h2>Trợ lý AI báo cáo dữ liệu</h2>
-    """,
-    unsafe_allow_html=True
-)
-
-# Initialize chat session variables if not already set
-if "chat_active" not in st.session_state:
-    st.session_state.chat_active = False
-
-# Display chat messages (no history saving)
-with st.container():
-    # Chat input
-    user_input = st.chat_input("Hãy đặt câu hỏi về bộ dữ liệu:")
-
-    if user_input:
-        # Display user message
-        with st.chat_message("user"):
-            st.markdown(user_input)
-
-        # Generate AI response
-        response = process_user_query(user_input)
-
-        # Display assistant response
-        with st.chat_message("assistant"):
-            st.markdown(response)
-
-
-# Close chat container
-st.markdown("</div>", unsafe_allow_html=True)
-
 
 tableau_embed_code = """
 <div style='display: flex; justify-content: center; align-items: center; width: 100%; height: 100vh;'>
@@ -205,3 +171,37 @@ st.markdown("""
 
 # Display the centered and responsive Tableau embed
 st.components.v1.html(tableau_embed_code, height=1000, scrolling=False)
+
+# HTML for toggle button and chat container
+st.markdown(
+    """
+    <div class="chat-container">
+        <h2>Trợ lý AI báo cáo dữ liệu</h2>
+    """,
+    unsafe_allow_html=True
+)
+
+# Initialize chat session variables if not already set
+if "chat_active" not in st.session_state:
+    st.session_state.chat_active = False
+
+# Display chat messages (no history saving)
+with st.container():
+    # Chat input
+    user_input = st.chat_input("Hãy đặt câu hỏi về bộ dữ liệu:")
+
+    if user_input:
+        # Display user message
+        with st.chat_message("user"):
+            st.markdown(user_input)
+
+        # Generate AI response
+        response = process_user_query(user_input)
+
+        # Display assistant response
+        with st.chat_message("assistant"):
+            st.markdown(response)
+
+
+# Close chat container
+st.markdown("</div>", unsafe_allow_html=True)
