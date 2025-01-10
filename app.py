@@ -54,59 +54,154 @@ def process_user_query(query):
         f"""
         Bạn là một trợ lý thông minh với khả năng trả lời các câu hỏi phức tạp liên quan đến bộ dữ liệu lớn và phân tích sâu sắc. Bạn có khả năng giúp người dùng hiểu rõ hơn về các thông tin và các phân tích có sẵn, cũng như hỗ trợ họ đưa ra các quyết định chính xác và hợp lý dựa trên dữ liệu.
 
-        **Thông tin về bộ dữ liệu**:
+        *Thông tin về bộ dữ liệu*:
         {dataset_text}
 
-        **Nhận xét từ con người**:
+        *Nhận xét từ con người*:
         {extra_info}
         {extra_info_2}
 
-        **Mật độ và phân phối dữ liệu**:
+        *Mật độ và phân phối dữ liệu*:
         {density}
 
-        **Phân tích và nhận xét từ OpenAI**:
+        *Phân tích và nhận xét từ OpenAI*:
         {openai_insights}
         {openai_insights_2}
 
-        **Tóm tắt tổng quan**:
+        *Tóm tắt tổng quan*:
         {openai_summary}
 
-        **Nhiệm vụ của bạn**:
+        *Nhiệm vụ của bạn*:
         - Xử lý và chọn lọc các thông tin quan trọng, đặc biệt chú trọng đến những yếu tố có tính trùng lặp cao và bảo đảm tính chính xác trong các phân tích.
         - Cung cấp các dự đoán hoặc giải thích dựa trên dữ liệu có sẵn và kết nối các phân tích với các tình huống thực tế. Đảm bảo rằng các dự đoán này dễ hiểu và có thể giúp người dùng hình dung rõ ràng về kết quả có thể xảy ra.
         - Phân tích và kết nối các yếu tố dữ liệu để tạo ra những nhận xét có chiều sâu và hữu ích cho người dùng. Đưa ra các nhận xét bổ sung nếu nhận thấy rằng người dùng có thể chưa nhận ra một mối liên hệ quan trọng nào đó trong dữ liệu.
         - Khi trả lời câu hỏi, hãy đảm bảo rằng câu trả lời của bạn rõ ràng, dễ hiểu và mạch lạc. Đặc biệt chú trọng đến việc giải quyết các câu hỏi phức tạp hoặc mơ hồ bằng cách cung cấp các giải thích chi tiết và dễ tiếp cận.
         - Nếu câu hỏi có sự mơ hồ hoặc không rõ ràng, hãy yêu cầu người dùng cung cấp thêm thông tin và làm rõ các yêu cầu, hoặc đề xuất các giải pháp khả thi mà họ có thể tham khảo để đạt được câu trả lời chính xác hơn.
 
-        **Câu hỏi từ người dùng**: {query}
+        *Câu hỏi từ người dùng*: {query}
 
         Hãy trả lời một cách chi tiết, rõ ràng và chính xác bằng Tiếng Việt. Đảm bảo rằng câu trả lời của bạn không chỉ đầy đủ mà còn có tính linh hoạt, giúp người dùng không chỉ trả lời câu hỏi mà còn khám phá thêm thông tin có giá trị từ bộ dữ liệu.
         """
     )
     return generate_openai_response(system_prompt)
 
+# HTML for toggle button and chat container
+st.markdown(
+    """
+    <div class="chat-container">
+        <h2>Trợ lý AI báo cáo dữ liệu</h2>
+    """,
+    unsafe_allow_html=True
+)
 
-# Streamlit UI components
-st.title("Trợ lý AI báo cáo dữ liệu")
-st.markdown("Hãy đặt câu hỏi liên quan đến bộ dữ liệu để nhận các phân tích chi tiết.")
+# Initialize chat session variables if not already set
+if "chat_active" not in st.session_state:
+    st.session_state.chat_active = False
 
-# Display previous chat messages from session state
-for message in st.session_state.messages:
-    with st.chat_message(message["role"]):
-        st.markdown(message["content"])
+# Display chat messages (no history saving)
+with st.container():
+    # Chat input
+    user_input = st.chat_input("Hãy đặt câu hỏi về bộ dữ liệu:")
 
-# Accept user input for the query
-user_input = st.chat_input("Hãy đặt câu hỏi về bộ dữ liệu:")
-if user_input:
-    # Add user message to chat history
-    st.session_state.messages.append({"role": "user", "content": user_input})
-    with st.chat_message("user"):
-        st.markdown(user_input)
+    if user_input:
+        # Display user message
+        with st.chat_message("user"):
+            st.markdown(user_input)
 
-    # Generate AI response
-    with st.chat_message("assistant"):
+        # Generate AI response
         response = process_user_query(user_input)
-        st.markdown(response)
-    
-    # Append assistant response to chat history
-    st.session_state.messages.append({"role": "assistant", "content": response})
+
+        # Display assistant response
+        with st.chat_message("assistant"):
+            st.markdown(response)
+
+
+# Close chat container
+st.markdown("</div>", unsafe_allow_html=True)
+
+
+tableau_embed_code = """
+<div style='display: flex; justify-content: center; align-items: center; width: 100%; height: 100vh;'>
+    <div class='tableauPlaceholder' id='viz1736503841283' style='position: relative; width: 100%; height: 100%; max-width: 100%; max-height: 100vh;'>
+        <noscript>
+            <a href='#'>
+                <img alt='Nhà thuốc' src='https://public.tableau.com/static/images/Da/Dashboard_17364422264210/Nhthuc/1_rss.png' style='border: none' />
+            </a>
+        </noscript>
+        <object class='tableauViz' style='display:block; width: 100%; height: 100%;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='Dashboard_17364422264210/Nhthuc' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image' value='https://public.tableau.com/static/images/Da/Dashboard_17364422264210/Nhthuc/1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+            <param name='filter' value='publish=yes' />
+        </object>
+    </div>
+    <script type='text/javascript'>
+        var divElement = document.getElementById('viz1736503841283');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        
+        function resizeViz() {
+            var containerWidth = divElement.parentElement.clientWidth;
+            var containerHeight = divElement.parentElement.clientHeight;
+            
+            // Calculate the aspect ratio of your dashboard (adjust these values based on your dashboard's original dimensions)
+            var dashboardAspectRatio = 16/9; // Example ratio, adjust as needed
+            
+            var newWidth = containerWidth;
+            var newHeight = containerHeight;
+            
+            // Maintain aspect ratio while fitting within container
+            if (containerWidth / containerHeight > dashboardAspectRatio) {
+                newWidth = containerHeight * dashboardAspectRatio;
+            } else {
+                newHeight = containerWidth / dashboardAspectRatio;
+            }
+            
+            vizElement.style.width = newWidth + 'px';
+            vizElement.style.height = newHeight + 'px';
+            
+            // Center the visualization if it's smaller than the container
+            divElement.style.display = 'flex';
+            divElement.style.justifyContent = 'center';
+            divElement.style.alignItems = 'center';
+        }
+        
+        // Add resize listener
+        window.addEventListener('resize', resizeViz);
+        
+        // Initial sizing
+        resizeViz();
+        
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
+</div>
+"""
+
+# Use a container to set the maximum width and height
+st.markdown("""
+    <style>
+        .stApp {
+            max-width: 100%;
+            padding: 0;
+        }
+        iframe {
+            width: 100%;
+            height: 100vh;
+            border: none;
+        }
+    </style>
+""", unsafe_allow_html=True)
+
+# Display the centered and responsive Tableau embed
+st.components.v1.html(tableau_embed_code, height=1000, scrolling=False)
