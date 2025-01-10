@@ -87,7 +87,8 @@ def process_user_query(query):
 
 
 tableau_embed_code = """
-<div class='tableauPlaceholder' id='viz1736519773696' style='position: relative'>
+<div style='display: flex; justify-content: center; align-items: center; width: 100%; height: 100vh;'>
+    <div class='tableauPlaceholder' id='viz1736503841283' style='position: relative; width: 100%; height: 100%; max-width: 100%; max-height: 100vh;'>
     <noscript>
         <a href='#'>
             <img alt='Nhà thuốc' src='https://public.tableau.com/static/images/Da/Dashboard_Chatbot/Nhthuc/1_rss.png' style='border: none' />
@@ -126,6 +127,7 @@ tableau_embed_code = """
     scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
     vizElement.parentNode.insertBefore(scriptElement, vizElement);
 </script>
+</div>
 """
 
 # Use a container to set the maximum width and height
