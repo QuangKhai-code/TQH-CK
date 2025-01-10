@@ -89,44 +89,67 @@ def process_user_query(query):
 tableau_embed_code = """
 <div style='display: flex; justify-content: center; align-items: center; width: 100%; height: 100vh;'>
     <div class='tableauPlaceholder' id='viz1736521325502' style='position: relative; width: 100%; height: 100%; max-width: 100%; max-height: 100vh;'>
-    <noscript>
-        <a href='#'>
-            <img alt='Nhà thuốc' src='https://public.tableau.com/static/images/Da/Dashboard_Chatbot/Nhthuc/1_rss.png' style='border: none' />
-        </a>
-    </noscript>
-    <object class='tableauViz' style='display:none;'>
-        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
-        <param name='embed_code_version' value='3' />
-        <param name='site_root' value='' />
-        <param name='name' value='Dashboard_Chatbot/Nhthuc' />
-        <param name='tabs' value='no' />
-        <param name='toolbar' value='yes' />
-        <param name='static_image' value='https://public.tableau.com/static/images/Da/Dashboard_Chatbot/Nhthuc/1.png' />
-        <param name='animate_transition' value='yes' />
-        <param name='display_static_image' value='yes' />
-        <param name='display_spinner' value='yes' />
-        <param name='display_overlay' value='yes' />
-        <param name='display_count' value='yes' />
-        <param name='language' value='en-US' />
-    </object>
-</div>
-<script type='text/javascript'>
-    var divElement = document.getElementById('viz1736521325502');
-    var vizElement = divElement.getElementsByTagName('object')[0];
-    if (divElement.offsetWidth > 800) {
-        vizElement.style.width = '100%';
-        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-    } else if (divElement.offsetWidth > 500) {
-        vizElement.style.width = '100%';
-        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
-    } else {
-        vizElement.style.width = '100%';
-        vizElement.style.height = '2677px';
-    }
-    var scriptElement = document.createElement('script');
-    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
-    vizElement.parentNode.insertBefore(scriptElement, vizElement);
-</script>
+        <noscript>
+            <a href='#'>
+                <img alt='Nhà thuốc' src='https://public.tableau.com/static/images/Da/Dashboard_Chatbot/Nhthuc/1_rss.png' style='border: none' />
+            </a>
+        </noscript>
+        <object class='tableauViz' style='display:block; width: 100%; height: 100%;'>
+            <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' />
+            <param name='site_root' value='' />
+            <param name='name' value='Dashboard_Chatbot/Nhthuc' />
+            <param name='tabs' value='no' />
+            <param name='toolbar' value='yes' />
+            <param name='static_image' value='https://public.tableau.com/static/images/Da/Dashboard_Chatbot/Nhthuc/1.png' />
+            <param name='animate_transition' value='yes' />
+            <param name='display_static_image' value='yes' />
+            <param name='display_spinner' value='yes' />
+            <param name='display_overlay' value='yes' />
+            <param name='display_count' value='yes' />
+            <param name='language' value='en-US' />
+        </object>
+    </div>
+    <script type='text/javascript'>
+        var divElement = document.getElementById('viz1736521325502');
+        var vizElement = divElement.getElementsByTagName('object')[0];
+        
+        function resizeViz() {
+            var containerWidth = divElement.parentElement.clientWidth;
+            var containerHeight = divElement.parentElement.clientHeight;
+            
+            // Calculate the aspect ratio of your dashboard (adjust these values based on your dashboard's original dimensions)
+            var dashboardAspectRatio = 16/9; // Example ratio, adjust as needed
+            
+            var newWidth = containerWidth;
+            var newHeight = containerHeight;
+            
+            // Maintain aspect ratio while fitting within container
+            if (containerWidth / containerHeight > dashboardAspectRatio) {
+                newWidth = containerHeight * dashboardAspectRatio;
+            } else {
+                newHeight = containerWidth / dashboardAspectRatio;
+            }
+            
+            vizElement.style.width = newWidth + 'px';
+            vizElement.style.height = newHeight + 'px';
+            
+            // Center the visualization if it's smaller than the container
+            divElement.style.display = 'flex';
+            divElement.style.justifyContent = 'center';
+            divElement.style.alignItems = 'center';
+        }
+        
+        // Add resize listener
+        window.addEventListener('resize', resizeViz);
+        
+        // Initial sizing
+        resizeViz();
+        
+        var scriptElement = document.createElement('script');
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);
+    </script>
 </div>
 """
 
