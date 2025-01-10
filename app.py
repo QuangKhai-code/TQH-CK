@@ -88,7 +88,7 @@ def process_user_query(query):
 
 tableau_embed_code = """
 <div style='display: flex; justify-content: center; align-items: center; width: 100%; height: 100vh;'>
-    <div class='tableauPlaceholder' id='viz1736519773696' style='position: relative; width: 100%; height: 100%; max-width: 100%; max-height: 100vh;'>
+    <div class='tableauPlaceholder' id='viz1736521325502' style='position: relative; width: 100%; height: 100%; max-width: 100%; max-height: 100vh;'>
     <noscript>
         <a href='#'>
             <img alt='Nhà thuốc' src='https://public.tableau.com/static/images/Da/Dashboard_Chatbot/Nhthuc/1_rss.png' style='border: none' />
@@ -111,7 +111,7 @@ tableau_embed_code = """
     </object>
 </div>
 <script type='text/javascript'>
-    var divElement = document.getElementById('viz1736519773696');
+    var divElement = document.getElementById('viz1736521325502');
     var vizElement = divElement.getElementsByTagName('object')[0];
     if (divElement.offsetWidth > 800) {
         vizElement.style.width = '100%';
