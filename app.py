@@ -213,7 +213,7 @@ if user_input:
     st.session_state.messages.append({"role": "assistant", "content": response})
 
 # Upload and analyze chart images
-uploaded_images = st.file_uploader("Tải lên biểu đồ (PNG, JPG, JPEG) cần nhận xét:", type=["png", "jpg", "jpeg"], accept_multiple_files=True)
+uploaded_images = st.file_uploader("Tải lên biểu đồ một biểu đồ (PNG, JPG, JPEG) cần nhận xét:", type=["png", "jpg", "jpeg"], accept_multiple_files=False)
 if uploaded_images:
 
     for uploaded_image in uploaded_images:
