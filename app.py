@@ -89,32 +89,6 @@ def process_user_query(query):
     )
     return generate_openai_response(system_prompt)
 
-
-# Streamlit UI components
-st.title("Trợ lý AI báo cáo dữ liệu")
-st.markdown("Hãy đặt câu hỏi liên quan đến bộ dữ liệu để nhận các phân tích chi tiết.")
-
-# Display previous chat messages from session state
-for message in st.session_state.messages:
-    with st.chat_message(message["role"]):
-        st.markdown(message["content"])
-
-# Accept user input for the query
-user_input = st.chat_input("Hãy đặt câu hỏi về bộ dữ liệu:")
-if user_input:
-    # Add user message to chat history
-    st.session_state.messages.append({"role": "user", "content": user_input})
-    with st.chat_message("user"):
-        st.markdown(user_input)
-
-    # Generate AI response
-    with st.chat_message("assistant"):
-        response = process_user_query(user_input)
-        st.markdown(response)
-    
-    # Append assistant response to chat history
-    st.session_state.messages.append({"role": "assistant", "content": response})
-
 # Function to analyze the chart
 def analyze_chart_with_gpt(image_file):
     try:
@@ -192,7 +166,7 @@ def analyze_chart_with_gpt(image_file):
 
 # Streamlit UI components
 st.title("Trợ lý AI báo cáo dữ liệu")
-st.markdown("Hãy đặt câu hỏi liên quan đến bộ dữ liệu hoặc tải lên biểu đồ để nhận phân tích chi tiết.")
+st.markdown("Hãy đặt câu hỏi liên quan đến bộ dữ liệu để nhận các phân tích chi tiết.")
 
 # Display previous chat messages from session state
 for message in st.session_state.messages:
@@ -202,14 +176,17 @@ for message in st.session_state.messages:
 # Accept user input for the query
 user_input = st.chat_input("Hãy đặt câu hỏi về bộ dữ liệu:")
 if user_input:
+    # Add user message to chat history
     st.session_state.messages.append({"role": "user", "content": user_input})
     with st.chat_message("user"):
         st.markdown(user_input)
 
+    # Generate AI response
     with st.chat_message("assistant"):
         response = process_user_query(user_input)
         st.markdown(response)
-
+    
+    # Append assistant response to chat history
     st.session_state.messages.append({"role": "assistant", "content": response})
 
 # Upload and analyze chart images
