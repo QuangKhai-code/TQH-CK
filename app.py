@@ -9,7 +9,7 @@ from PIL import Image as PILImage
 st.set_page_config(page_title="Trợ lý AI báo cáo dữ liệu", layout="wide")
 
 # Set your OpenAI API key
-openai.api_key = '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'
+openai.api_key = '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'
 
 # Initialize session state variables
 if "openai_model" not in st.session_state:
