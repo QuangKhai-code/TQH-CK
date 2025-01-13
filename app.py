@@ -294,8 +294,3 @@ if uploaded_image:
     # Analyze chart
     analysis_result = analyze_chart_with_gpt(uploaded_image)
     st.write(analysis_result)
-
-# Display previous chat messages from session state
-for message in st.session_state.messages:
-    with st.chat_message(message["role"]):
-        st.markdown(message["content"])
