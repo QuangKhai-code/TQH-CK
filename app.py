@@ -190,13 +190,12 @@ if user_input:
     st.session_state.messages.append({"role": "assistant", "content": response})
 
 # Upload and analyze chart images
-uploaded_images = st.file_uploader("Tải lên biểu đồ một biểu đồ (PNG, JPG, JPEG) cần nhận xét:", type=["png", "jpg", "jpeg"], accept_multiple_files=False)
-if uploaded_images:
+uploaded_image = st.file_uploader("Tải lên biểu đồ (PNG, JPG, JPEG):", type=["png", "jpg", "jpeg"])
+if uploaded_image:
+    # Open the image from the uploaded file object
+    image = PILImage.open(uploaded_image)
+    st.image(image, caption="Biểu đồ đã tải lên", use_container_width=True)
 
-    for uploaded_image in uploaded_images:
-        image = PILImage.open(uploaded_image)
-        st.image(image, caption="Biểu đồ đã tải lên", use_container_width=True)
-
-        # Analyze chart
-        analysis_result = analyze_chart_with_gpt(uploaded_image)
-        st.write(analysis_result)
+    # Analyze chart
+    analysis_result = analyze_chart_with_gpt(uploaded_image)
+    st.write(analysis_result)
