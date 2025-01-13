@@ -168,6 +168,19 @@ def analyze_chart_with_gpt(image_file):
 st.title("Trợ lý AI báo cáo dữ liệu")
 st.markdown("Hãy đặt câu hỏi liên quan đến bộ dữ liệu để nhận các phân tích chi tiết.")
 
+
+
+# Upload and analyze chart images
+uploaded_image = st.file_uploader("Tải lên biểu đồ (PNG, JPG, JPEG):", type=["png", "jpg", "jpeg"])
+if uploaded_image:
+    # Open the image from the uploaded file object
+    image = PILImage.open(uploaded_image)
+    st.image(image, caption="Biểu đồ đã tải lên", use_container_width=True)
+
+    # Analyze chart
+    analysis_result = analyze_chart_with_gpt(uploaded_image)
+    st.write(analysis_result)
+
 # Display previous chat messages from session state
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
@@ -188,14 +201,3 @@ if user_input:
     
     # Append assistant response to chat history
     st.session_state.messages.append({"role": "assistant", "content": response})
-
-# Upload and analyze chart images
-uploaded_image = st.file_uploader("Tải lên biểu đồ (PNG, JPG, JPEG):", type=["png", "jpg", "jpeg"])
-if uploaded_image:
-    # Open the image from the uploaded file object
-    image = PILImage.open(uploaded_image)
-    st.image(image, caption="Biểu đồ đã tải lên", use_container_width=True)
-
-    # Analyze chart
-    analysis_result = analyze_chart_with_gpt(uploaded_image)
-    st.write(analysis_result)
