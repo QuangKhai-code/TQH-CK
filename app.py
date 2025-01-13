@@ -5,7 +5,7 @@ import streamlit as st
 st.set_page_config(page_title="Trợ lý AI báo cáo dữ liệu", layout="wide")
 
 # Set your OpenAI API key
-openai.api_key = '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'
+openai.api_key = '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'
 
 # Initialize session state variables
 if "openai_model" not in st.session_state:
@@ -204,3 +204,94 @@ with st.container():
 
 # Close chat container
 st.markdown("</div>", unsafe_allow_html=True)
+
+
+# Function to analyze the chart
+def analyze_chart_with_gpt(image_file):
+    try:
+        # Resize and save the image to a buffer
+        image = PILImage.open(image_file)
+        #resized_image = resize_image(image)
+        resized_image = image
+        buffered = io.BytesIO()
+        resized_image.save(buffered, format="PNG")
+        
+        # Encode the image to base64
+        img_base64 = base64.b64encode(buffered.getvalue()).decode('utf-8')
+
+        chart_analysis_prompt = f"""
+        Bạn là một chuyên gia phân tích dữ liệu và trực quan hóa thông tin. Với kỹ năng đọc hiểu biểu đồ xuất sắc, bạn sẽ phân tích biểu đồ được cung cấp. Hãy viết một báo cáo phân tích chi tiết, mạch lạc và chuyên sâu với các phần sau:
+        1. **Tổng quan**:
+        - Loại biểu đồ (ví dụ: biểu đồ cột, biểu đồ đường, biểu đồ tròn, v.v.).
+        - Chủ đề chính và phạm vi dữ liệu (bao gồm thời gian, phạm vi giá trị, và các yếu tố đo lường).
+        - Những thông tin xuất hiện trên biểu đồ (nhãn, chú thích, đơn vị, v.v.).
+        - Ý nghĩa tổng quát và mục tiêu của biểu đồ.
+
+        2. **Xu hướng chính**:
+        - Phân tích các xu hướng nổi bật (tăng, giảm, dao động, ổn định).
+        - Sự thay đổi đáng chú ý giữa các yếu tố hoặc theo thời gian.
+        - Các mối quan hệ hoặc tương quan giữa các biến số.
+
+        3. **Chi tiết đặc trưng**:
+        - Điểm dữ liệu quan trọng nhất (giá trị cao nhất, thấp nhất, trung bình).
+        - Các ngoại lệ hoặc giá trị bất thường.
+        - Bất kỳ sự kiện hoặc khoảng thời gian đặc biệt nào gây ra biến động.
+
+        4. **Phát hiện ẩn**:
+        - Nhận diện các xu hướng hoặc mẫu dữ liệu tinh tế mà không dễ nhận ra ngay từ cái nhìn đầu tiên.
+        - Mối tương quan ẩn giữa các yếu tố.
+        - Bất kỳ phát hiện đặc biệt nào từ cấu trúc dữ liệu.
+
+        5. **Kết luận**:
+        - Tóm tắt lại những phát hiện quan trọng nhất.
+        - Nhận định ý nghĩa thực tiễn hoặc bài học có thể rút ra từ biểu đồ.
+        - Gợi ý hoặc đề xuất dựa trên kết quả phân tích (nếu có).
+
+        **Yêu cầu kỹ thuật**:
+        - Trả lời bằng tiếng Việt
+        - Sử dụng ngôn ngữ chuyên nghiệp, chính xác và giàu thông tin.
+        - Đưa ra số liệu cụ thể từ biểu đồ để minh họa lập luận.
+        - Không bỏ sót bất kỳ thông tin nào quan trọng và đảm bảo phân tích sâu sắc.
+        - Hãy giải thích sao cho người đọc không cần nhìn biểu đồ vẫn có thể hiểu nội dung và ý nghĩa.
+
+        Hãy bắt đầu phân tích chi tiết dựa trên biểu đồ được cung cấp.
+        """
+
+        response = openai.ChatCompletion.create(
+            model="gpt-4o",
+            messages=[
+                                {"role": "system", "content": 'Bạn là một trợ lý AI chuyên phân tích biểu đồ'},
+                                {"role": "user", "content":[
+                                    {
+                                        "type": "text",
+                                        "text": chart_analysis_prompt
+                                    },
+                                    {
+                                        "type": "image_url",
+                                        "image_url": {
+                                            "url": f"data:image/png;base64, {img_base64}"
+                                        }
+                                    }
+                                ]}
+                            ],
+                            max_tokens=1500
+                        )
+
+        return response['choices'][0]['message']['content'].strip()
+    except Exception as e:
+        return f"Lỗi xử lý: {e}"
+# Upload and analyze chart images
+uploaded_image = st.file_uploader("Tải lên biểu đồ (PNG, JPG, JPEG):", type=["png", "jpg", "jpeg"])
+if uploaded_image:
+    # Open the image from the uploaded file object
+    image = PILImage.open(uploaded_image)
+    st.image(image, caption="Biểu đồ đã tải lên", use_container_width=True)
+
+    # Analyze chart
+    analysis_result = analyze_chart_with_gpt(uploaded_image)
+    st.write(analysis_result)
+
+# Display previous chat messages from session state
+for message in st.session_state.messages:
+    with st.chat_message(message["role"]):
+        st.markdown(message["content"])
