@@ -1,5 +1,9 @@
 import openai
 import streamlit as st
+import io
+import os
+import base64
+from PIL import Image as PILImage
 
 # Set the page configuration first
 st.set_page_config(page_title="Trợ lý AI báo cáo dữ liệu", layout="wide")
